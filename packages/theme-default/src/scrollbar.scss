@@ -1,0 +1,29 @@
+
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(scrollbar) {
+    overflow: hidden;
+    position: relative;
+
+    &:hover,
+    &:active,
+    &:focus {
+        > .xc-scrollbar__bar {
+            opacity: 1;
+            transition: opacity 340ms ease-out;
+        }
+    }
+
+    @include e(wrap) {
+        overflow: scroll;
+        height: 100%;
+
+        @include m(hidden-default) {
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+}

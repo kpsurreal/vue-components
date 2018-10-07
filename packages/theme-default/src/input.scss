@@ -1,0 +1,48 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(input) {
+    width: 100%;
+    font-size: $--input-font-size;
+    position: relative;
+    display: inline-block;
+
+    @include e(inner) {
+        width: 100%;
+        height: $--input-height;
+        border-radius: $--input-border-radius;
+        border: $--input-border;
+        outline: none;
+        box-sizing: border-box;
+        font-size: inherit;
+        line-height: 1;
+        padding: 0 10px;
+        transition: $--border-transition-base;
+        color: $--input-color;
+
+        &::placeholder {
+            color: $--input-placeholder-color;
+        }
+ 
+        &:hover {
+            border: $--input-hover-border;
+        }
+
+        &:focus {
+            border: $--input-focus-border;
+        }    
+    }
+
+    @include when(disabled) {
+        @include e(inner) {
+            background-color: $--input-disabled-fill;
+            border-color: $--input-disabled-border;
+            color: $--input-disabled-color;
+            cursor: not-allowed;
+            
+            &::placeholder {
+              color: $--input-disabled-placeholder-color;
+            }
+        }
+    }
+}

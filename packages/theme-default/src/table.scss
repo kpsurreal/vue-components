@@ -1,0 +1,77 @@
+@import "common/var";
+@import "mixins/mixins";
+@import "mixins/utils";
+
+@include b(table) {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex: 1;
+    max-width: 100%;
+    background-color: $--color-white;
+    font-size: 12px;
+    color: #5a5e66;
+
+    @include e(header-wrapper) {
+        width: 100%;
+    }
+    @include e(body-wrapper) {
+        overflow: auto;
+        position: relative;
+    }
+    @include e((header, body, footer)) {
+        table-layout: fixed;
+    }
+
+    @include m(border) {
+        border: $--table-border;
+        border-right: none;
+        border-bottom: none;
+        th, td {
+            border-right: $--table-border;
+      
+            &:first-child .cell {
+              padding-left: 10px;
+            }
+        }
+        & th {
+            border-bottom: $--table-border;
+        }      
+    }
+
+    .hidden-columns{
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    thead{
+        color: #999;
+    }
+    tr{
+        &:hover > td{
+            background-color: #f5f7fa;
+        }
+    }
+    th, td {
+        padding: 10px 0;
+        border-bottom: 1px solid #e6ebf5;
+        min-width: 0;
+        box-sizing: border-box;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+        position: relative;
+        text-align: left;
+        transition: background-color .25s ease;
+    }
+
+    .cell{
+        box-sizing: border-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        word-break: break-all;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+

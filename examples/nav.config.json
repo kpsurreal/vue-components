@@ -1,0 +1,96 @@
+{
+    "开发指南": [
+        {
+            "path": "/guid",
+            "name": "guid",
+            "desc": "介绍"
+        },
+        {
+            "path": "/",
+            "name": "index",
+            "type": "pages"
+        },
+        {
+            "name": "install",
+            "path": "/install",
+            "desc": "安装"
+        },
+        {
+            "name": "start",
+            "path": "/start",
+            "desc": "快速开始"
+        }
+    ],
+    "组件": [
+        {
+            "desc": "Basic",
+            "path": "/component",
+            "items": [
+                 {
+                    "desc": "Layout 布局",
+                    "name": "layout",
+                    "path": "/layout"
+                },
+                {
+                    "desc": "Button 按钮",
+                    "name": "button",
+                    "path": "/button"
+                }
+            ]
+        },
+        {
+            "desc": "Form",
+            "path": "/component",
+            "items": [
+                {
+                    "desc": "Radio 单选框",
+                    "name": "radio",
+                    "path": "/radio"
+                },
+                {
+                    "desc": "Checkbox 多选框",
+                    "name": "checkbox",
+                    "path": "/checkbox"
+                },
+                {
+                    "desc": "Input 输入框",
+                    "name": "input",
+                    "path": "/input"
+                }
+            ]
+        },
+        {
+            "desc": "Navigation",
+            "path": "/component",
+            "items": [
+                {
+                    "desc": "Tabs 标签页",
+                    "name": "tabs",
+                    "path": "/tabs"
+                }
+            ]
+        },
+        {
+            "desc": "Data",
+            "path": "/component",
+            "items": [
+                {
+                    "desc": "Table 表格",
+                    "name": "table",
+                    "path": "/table"
+                }
+            ]
+        },
+        {
+            "desc": "Other",
+            "path": "/component",
+            "items": [
+                {
+                    "desc": "Dialog 对话框",
+                    "name": "dialog",
+                    "path": "/dialog"
+                }
+            ]
+        }
+    ]
+}
